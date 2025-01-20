@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="casino">
+        <meta name="description" content="Главная страница">
+        <meta name="keywords" content="казино, главная, без регистрации">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/cc29e80886.js" crossorigin="anonymous"></script>
+    
+    </head>
+        <title>
+            Mini Casino - Главная 
+        </title>
+    </head>
+
+    <body class="body_style">
+    
+        <div class="game_main_container">
+            <div class="icons_menu">
+                <div class="mines" > <i class='bx bxs-bomb'></i> <a href="#"> Mines</a> </div>
+                <div class="boss_fight"> <i class="fa-solid fa-ghost"> </i> <a href="#"> Boss Fight</a> </div>
+                <div class="plinko"><i class="fa-solid fa-hockey-puck"> </i> <a href="#"> Plinko</a> </div>
+                <div class="ballon"><i class='bx bxs-balloon' > </i> <a href="#">  Ballon</a> </div>
+                <div class="roullete"><i class="fa-solid fa-circle-xmark fa-rotate-by" ></i> <a href="#">  Roullete </a></div>
+            </div>
+            <header class="game_name"> <i class="fa-solid fa-chart-line" style="color: #ffffff;"></i> CRASH</header>
+        <div class="game_window">  
+            <span class="multiplier">49,2X</span> 
+           </div>
+        <div class="bet_settings">
+            <div class="bet_placing_div"> Сумма ставки: <input class="bet_size" type="text" maxlength="5" max="1000" placeholder="  1000" oninput="this.value=this.value.replace(/[^0-9]/g, '')"> 
+                </div>
+                <div class="auto_cashout"> Авто-вывод: <input class="bet_size" type="text" maxlength="4" max="1000" placeholder=" 2,00" oninput="this.value=this.value.replace(/[^0-9,]/g, '')" >  </div>
+            <div id="button_bet_div"> <button id="button_bet">СТАВКА</button></div>
+            
+        </div>
+       
+        
+    </body>
+
+</html>
