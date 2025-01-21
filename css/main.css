@@ -159,9 +159,6 @@ body, html {
     cursor: url(https://sweezy-cursors.com/wp-content/uploads/cursor/casino-chip-club-diamond-3d/casino-chip-club-diamond-3D-cursor-32x32.png), default !important
    
 }
-.bx {
-    
-}
 .icons_menu {
    display: flex;
    justify-content: space-between;
@@ -169,21 +166,27 @@ body, html {
    height: 50px;
    font-family: 'Kanit';
 }
-.mines {
-    
+
   
-   
-}
-.boss_fight {
+.mines:hover{
+    animation: fa-bounce 1s infinite;
+      
+      
     
 }
-.plinko {
-    
+
+.boss_fight:hover {
+    animation: fa-bounce 1s infinite;
 }
-.ballon {
-   
+.plinko:hover {
+    animation: fa-bounce 1s infinite;
 }
-.roullete {}
+.ballon:hover {
+    animation: fa-bounce 1s infinite;
+}
+.roullete:hover {
+    animation: fa-bounce 1s infinite;
+}
 a {
     text-decoration: none
 }
@@ -202,3 +205,7 @@ a:visited {
 .fa-solid {
     padding-right: 8px;
 }
+
+
+/* animations */
+
