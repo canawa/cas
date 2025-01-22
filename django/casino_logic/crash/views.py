@@ -5,13 +5,13 @@ def crash (request):
      return render(request,'crash/index.html')
 
 def boss_fight(request):
-     return HttpResponse('Тут будет босфайт')
+     return render(request,'crash/boss_fight.html')
 def mines(request):
-     return HttpResponse('Тут будут минки')
+     return render(request,'crash/mines.html')
 def roullete(request):
-     return HttpResponse('Тут будет рулетка')
+     return render(request,'crash/roullete.html')
 def ballon(request):
-     return HttpResponse('Тут будет Ballon')
+     return render(request,'crash/ballon.html')
 
 def plinko(request):
-     return HttpResponse('1')
+     return render(request,'crash/plinko.html')
