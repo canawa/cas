@@ -19,9 +19,9 @@ def crash_point():
                
 
 def crash (request):
-    
+     GameStats.objects.create(coef=crash_point())
      game_results = {
-          'result': crash_point()
+          'result': str(crash_point()) + 'x'
      }
      
      return render(request,'crash/index.html', game_results)
@@ -42,5 +42,5 @@ def plinko(request):
      return render(request,'crash/plinko.html')
 
 def stats(request):
-    data = GameStats.objects.order_by('coef')
+    data = GameStats.objects.all()
     return render(request, 'crash/all_game_stats.html', {'data':data})
