@@ -1,9 +1,27 @@
 from django.shortcuts import render, HttpResponse
-import random
+import secrets
+import time
+   
+
+def crash_point():
+     while True:
+          multiplier = secrets.randbelow(10**9) / 10**9
+          multiplier = 1 / multiplier * 0.95
+          multiplier = round(multiplier, 2)
+          if multiplier < 1:
+               multiplier = secrets.randbelow(10**9) / 10**9
+               multiplier = 1 / multiplier * 0.8
+               multiplier = round(multiplier, 2)
+               if multiplier<1:
+                    multiplier=1.00
+          
+          return str(multiplier) + 'x'
+               
 
 def crash (request):
+    
      game_results = {
-          'result': [2.56, 1.23, 45.2]
+          'result': crash_point()
      }
      
      return render(request,'crash/index.html', game_results)
@@ -19,3 +37,4 @@ def ballon(request):
 
 def plinko(request):
      return render(request,'crash/plinko.html')
+
