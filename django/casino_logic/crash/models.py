@@ -2,10 +2,11 @@ from django.db import models
 
 # Create your models here.
 class GameStats(models.Model):
-    game_id =  models.IntegerField('Game_id', )
+    game_id =  models.IntegerField('Game_id')
     coef = models.FloatField('Коэффициент')
-    player_id = models.FloatField('ID игрока') 
+    player_id = models.TextField('ID игрока') 
     game_type = models.TextField('Тип игры')
+   
     
     
     class Meta:

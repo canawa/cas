@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 import secrets
 import time
-   
+from .models import GameStats
 
 def crash_point():
           multiplier = secrets.randbelow(10**9) / 10**9
@@ -11,10 +11,11 @@ def crash_point():
                multiplier = secrets.randbelow(10**9) / 10**9
                multiplier = 1 / multiplier * 0.8
                multiplier = round(multiplier, 2)
+               
                if multiplier<1:
                     multiplier=1.00
           
-          return str(multiplier) + 'x'
+          return (multiplier) 
                
 
 def crash (request):
@@ -41,4 +42,5 @@ def plinko(request):
      return render(request,'crash/plinko.html')
 
 def stats(request):
-    return render(request, 'crash/all_game_stats.html')
+    data = GameStats.objects.order_by('coef')
+    return render(request, 'crash/all_game_stats.html', {'data':data})
