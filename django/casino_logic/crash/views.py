@@ -2,7 +2,11 @@ from django.shortcuts import render, HttpResponse
 import random
 
 def crash (request):
-     return render(request,'crash/index.html')
+     game_results = {
+          'result': [2.56, 1.23, 45.2]
+     }
+     
+     return render(request,'crash/index.html', game_results)
 
 def boss_fight(request):
      return render(request,'crash/boss_fight.html')
