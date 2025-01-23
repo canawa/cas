@@ -4,7 +4,6 @@ import time
    
 
 def crash_point():
-     while True:
           multiplier = secrets.randbelow(10**9) / 10**9
           multiplier = 1 / multiplier * 0.95
           multiplier = round(multiplier, 2)
@@ -26,6 +25,9 @@ def crash (request):
      
      return render(request,'crash/index.html', game_results)
 
+def move_to_main(request):
+      return render(request, 'crash/index.html' )
+
 def boss_fight(request):
      return render(request,'crash/boss_fight.html')
 def mines(request):
@@ -38,3 +40,5 @@ def ballon(request):
 def plinko(request):
      return render(request,'crash/plinko.html')
 
+def stats(request):
+    return render(request, 'crash/all_game_stats.html')

@@ -7,4 +7,9 @@ urlpatterns = [
     path('ballon',views.ballon,name='ballon'),
     path('roulette',views.roullete,name='roulette'),
     path('mines',views.mines,name='mines'),
+    path('stats/',views.stats,name='all_stats'),
+    path('stats/crash',views.stats, name='stats_crash'),
+    path('stats/mines',views.stats , name='stats_mines'),
+    path('stats/bossfight',views.stats , name='stats_boss_fight'),
+    path('stats/plinko',views.stats , name='stats_plinko'),
 ]
