@@ -3,7 +3,7 @@ import secrets
 import time
 import json
 from .models import GameStats
-
+import asyncio
 def crash_point():
           raw = secrets.randbelow(10**9) / 10**9
           if raw == 0:
@@ -21,7 +21,7 @@ def crash_point():
           return (multiplier) 
 
 
-async def crash (request):
+def crash (request):
      crash_game=crash_point()
      GameStats.objects.create(coef=crash_game)
      game_results = {
@@ -30,6 +30,8 @@ async def crash (request):
      
      with open("crash/static/crash/js/data.json", "w") as f:
           json.dump({"coefficient": crash_game}, f) 
+          
+    
 
 
      
